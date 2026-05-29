@@ -1,5 +1,5 @@
 # 🛒 TechMarket - Microservicio "Orders" (Blue-Green Deployment)
-**Versión:** `v0.1.0`
+**Versión:** `v0.2.0`
 
 Este repositorio contiene la implementación de la infraestructura y el pipeline CI/CD para el microservicio crítico transaccional **Orders**. El proyecto está diseñado bajo una arquitectura de alta disponibilidad en AWS, utilizando **Amazon EKS (Kubernetes)** y automatización mediante **GitHub Actions** para lograr despliegues con cero tiempo de inactividad (Zero Downtime).
 
@@ -22,9 +22,12 @@ Garantizar un **SLA del 99.9%** y resiliencia ante fallos en el procesamiento de
 
 ---
 
-## 📂 Estructura del Proyecto v0.1.0
+## 📂 Estructura del Proyecto v0.2.0
 ```text
 📦 ev2ciclovida_lslv
+ ┣ 📂 .github
+ ┃ ┗ 📂 workflows
+ ┃   ┗ 📜 deploy.yml        (El pipeline CI/CD para EKS)
  ┣ 📂 k8s
  ┃ ┣ 📜 deployment.yaml   (Los Pods para Blue y Green)
  ┃ ┗ 📜 service.yaml      (El interruptor del LoadBalancer)
