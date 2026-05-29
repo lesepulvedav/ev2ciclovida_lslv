@@ -6,7 +6,7 @@
 
 Este repositorio contiene la arquitectura, infraestructura y orquestación completa para el microservicio crítico transaccional **Orders** de TechMarket. El proyecto implementa un flujo de entrega continua de nivel empresarial utilizando **Amazon EKS (Kubernetes)** y una estrategia de despliegue **Blue-Green** para garantizar cero tiempo de inactividad (Zero Downtime) y protección financiera total.
 
----
+----
 
 ## 🎯 Resumen Ejecutivo y Arquitectura
 El objetivo central es mantener un **SLA del 99.9%** en el procesamiento de ventas. Para lograrlo, la arquitectura se sostiene en tres pilares:
@@ -14,7 +14,7 @@ El objetivo central es mantener un **SLA del 99.9%** en el procesamiento de vent
 2. **Estrategia Blue-Green:** Aislamiento de versiones a nivel de *Pods* en Kubernetes. Permite la validación en producción (entorno Green) y un conmutador instantáneo mediante un *LoadBalancer* de AWS.
 3. **Pipeline Inteligente (GitFlow):** Integración y Despliegue Continuo (CI/CD) multi-rama gestionado por GitHub Actions.
 
----
+----
 
 ## 📂 Estructura del Proyecto
 
