@@ -2,7 +2,9 @@ name: CI/CD EKS Blue-Green
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main
+      - dev
 
 env:
   AWS_REGION: us-east-1
