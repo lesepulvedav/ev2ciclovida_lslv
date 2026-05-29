@@ -11,4 +11,4 @@ spec:
     app: orders
     # ¡ESTE ES EL INTERRUPTOR MAGICO!
     # Cambia esto a "green" cuando quieras desviar el tráfico a la nueva versión
-    version: blue
+    version: green
