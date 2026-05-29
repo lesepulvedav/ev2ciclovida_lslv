@@ -1,0 +1,56 @@
+# ==========================================
+# ENTORNO BLUE (Versión 1)
+# ==========================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orders-blue
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: orders
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: orders
+        version: blue
+    spec:
+      containers:
+      - name: orders-api
+        image: REPLACE_IMAGE_URI # GitHub Actions reemplazará esto
+        ports:
+        - containerPort: 8080
+        env:
+        - name: BG_COLOR
+          value: "blue" # Variable de entorno para la demo visual
+
+---
+# ==========================================
+# ENTORNO GREEN (Versión 2 - Inactiva inicialmente)
+# ==========================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orders-green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: orders
+      version: green
+  template:
+    metadata:
+      labels:
+        app: orders
+        version: green
+    spec:
+      containers:
+      - name: orders-api
+        image: REPLACE_IMAGE_URI # GitHub Actions reemplazará esto
+        ports:
+        - containerPort: 8080
+        env:
+        - name: BG_COLOR
+          value: "green"
